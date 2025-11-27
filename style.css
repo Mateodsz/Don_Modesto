@@ -13,6 +13,14 @@
        font-weight: 700;
        font-style: normal;
 }
+
+@font-face {
+  font-family: "CenturyGothic"; /* Nombre que le das a tu fuente */
+  src: url("fonts/CenturyGothic.otf") format("woff2"),
+       url("fonts/CenturyGothic.otf") format("woff");
+       font-weight: 700;
+       font-style: normal;
+}
       
       body {
       margin: 0;
@@ -52,6 +60,7 @@
           color: #ffffff;
         }
     .link {
+      font-family: CenturyGothic;
       display: block;
       background: #ffffff;
       color: #ff0000;
@@ -59,7 +68,7 @@
       margin: 12px 0;
       border-radius: 10px;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 20px;
       transition: 0.2s;
     }
 
