@@ -34,12 +34,12 @@
   <script>
 // Eventos de clic para cada enlace
 document.querySelectorAll('.link').forEach((btn, index) => {
-btn.addEventListener('click', () => {
-gtag('event', 'click_enlace', {
-'event_category': 'Enlaces',
-'event_label': 'Enlace ' + (index + 1)
-});
-});
+  btn.addEventListener('click', () => {
+    gtag('event', 'click_enlace', {
+      'event_category': 'Enlaces',
+      'event_label': 'Enlace ' + (index + 1)
+    });
+  });
 });
 </script>
 
