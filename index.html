@@ -14,7 +14,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-W8ZRZCDYW6');
-  
+
 </script>
 </head>
 <body>
@@ -30,5 +30,18 @@
     <a href="https://wa.me/message/NIXI7KXD5H7NB1" class="link">Whatsapp - Sede DM de la 12</a>
       <p>¡Los mejores pasabocas más cerca de ti!</p>
   </div>
+
+  <script>
+// Eventos de clic para cada enlace
+document.querySelectorAll('.link').forEach((btn, index) => {
+btn.addEventListener('click', () => {
+gtag('event', 'click_enlace', {
+'event_category': 'Enlaces',
+'event_label': 'Enlace ' + (index + 1)
+});
+});
+});
+</script>
+
 </body>
 </html>
