@@ -31,13 +31,45 @@
       <p>¡Los mejores pasabocas más cerca de ti!</p>
   </div>
 
-  <script>
-// Eventos de clic para cada enlace
-document.querySelectorAll('.link').forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    gtag('event', 'click_enlace', {
-      'event_category': 'Enlaces',
-      'event_label': 'Enlace ' + (index + 1)
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const enlaces = document.querySelectorAll('.link');
+
+  enlaces.forEach((btn, index) => {
+    
+    btn.addEventListener('click', () => {
+
+      // Definir el nombre del evento según el botón
+      let eventName = "";
+      let labelName = "";
+
+      switch (index) {
+        case 0:
+          eventName = "click_combos_navidenos";
+          labelName = "Combos navideños";
+          break;
+        case 1:
+          eventName = "click_menu";
+          labelName = "Menú";
+          break;
+        case 2:
+          eventName = "click_whatsapp_garupal";
+          labelName = "WhatsApp Garupal";
+          break;
+        case 3:
+          eventName = "click_whatsapp_la12";
+          labelName = "WhatsApp La 12";
+          break;
+      }
+
+      // Enviar evento a GA4
+      gtag('event', eventName, {
+        event_category: 'Enlaces',
+        event_label: labelName,
+        button_index: index + 1
+      });
+
+      console.log("Evento enviado:", eventName, "-", labelName);
     });
   });
 });
